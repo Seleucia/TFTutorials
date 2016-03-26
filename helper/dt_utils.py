@@ -27,17 +27,12 @@ def load_pose(params,only_test=0,only_pose=1,sindex=0):
       X_train,Y_train=shuffle_in_unison_inplace(X_train,Y_train)
 
 
-
    #print("min: %f, max: %f "%(numpy.min(X_train),numpy.max(X_train)))
-   # Y_train=numpy.nan_to_num(Y_train)
-
 
    Y_train=Y_train/norm
    X_train=(X_train -min_tr) / (max_tr -min_tr)
 
-
    return (X_train,Y_train,X_test,Y_test)
-
 
 
 def load_full_pose(base_file,max_count,istest,get_flist,p_count,sindex):

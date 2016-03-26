@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$USER_HOME$/PycharmProjects/TFTutorials/.idea/RFTutorials.iml" filepath="$USER_HOME$/PycharmProjects/TFTutorials/.idea/RFTutorials.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/RFTutorials.iml" filepath="$PROJECT_DIR$/.idea/RFTutorials.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/TFTutorials.iml" filepath="$PROJECT_DIR$/.idea/TFTutorials.iml" />
     </modules>
   </component>
 </project>

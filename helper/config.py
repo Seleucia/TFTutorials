@@ -5,17 +5,16 @@ import platform
 def get_params():
    global params
    params={}
-   params['run_mode']=1 #0,full,1:only for check, 2: very small ds, 3:only ICL data
+   params['run_mode']=3 #1,training,2=resuming training.., 3=prediction
    params["rn_id"]="normal_b" #running id, model
    params["notes"]="blanket lstm simple running" #running id
-   params["model"]="blstmnp"#kccnr,dccnr
-   params["optimizer"]="RMSprop" #1=classic kcnnr, 2=patch, 3=conv, 4 =single channcel
+   params["model"]="lstm"#kccnr,dccnr
+   params["optimizer"]="Adam" #1=classic kcnnr, 2=patch, 3=conv, 4 =single channcel
    params['seq_length']= 20
    params['validate']= 1
-   params['resume']= 0
    params['mfile']= "lstm_normal_0.p"
 
-   params['batch_size']=10
+   params['batch_size']=100
    params['shufle_data']=1
    params['max_count']= 300
 
@@ -29,20 +28,23 @@ def get_params():
 
 
 
+
    # early-stopping parameters
    params['patience']= 10000  # look as this many examples regardless
    params['patience_increase']=2  # wait this much longer when a new best is
    params['improvement_threshold']=0.995  # a relative improvement of this much is
 
-   # learning parameters
-   params['momentum']=0.9    # the params for momentum
-   params['lr']=0.01
-   params['lr_decay']=0.01
-   params['squared_filter_length_limit']=15.0
-   params['n_epochs']=5
+   #Model parameters...
    params['n_hidden']= 512
    params['n_output']= 42
-   params['keep_prob']= 1.0
+   params['input_size']=1024
+   # learning parameters
+   params['momentum']=0.9    # the params for momentum
+   params['lr']=0.0001
+   params['lr_decay']=0.01
+   params['squared_filter_length_limit']=15.0
+   params['n_epochs']=10000
+   params['keep_prob']= 0.75
    params['max_grad_norm']= 5
    params["init_scale"]= 0.05
 
@@ -57,7 +59,7 @@ def get_params():
        params['max_count']= 100000
 
    if(platform.node()=="milletari-workstation"):
-       #params["data_dir"]="/home/coskun/PycharmProjects/data/rnn/180k/"
+       params["data_dir"]="/home/coskun/PycharmProjects/data/rnn/180k/"
        params["caffe"]="/usr/local/caffe/python"
        params["WITH_GPU"]=True
        params['n_hidden']= 128
@@ -75,7 +77,7 @@ def get_params():
    #params['step_size']=[10]
    params['test_size']=0.20 #Test size
    params['val_size']=0.20 #val size
-   params['test_freq']=2 #Test frequency
+   params['test_freq']=10 #Test frequency
    return params
 
 def update_params(params):
