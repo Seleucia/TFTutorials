@@ -2,19 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22f24330-a478-43cc-b9d5-5f8474beb4ec" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cnn.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cp/-1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cp/-1.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cp/model_0_1.11903705345.p" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cp/model_0_1.1203901882.p" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lstm_simple.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mlp.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yy.py" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/lstm.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/model_provider.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pred.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cnn.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/mlp.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/yy.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/train.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper/config.py" afterPath="$PROJECT_DIR$/helper/config.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper/dt_utils.py" afterPath="$PROJECT_DIR$/helper/dt_utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper/utils.py" afterPath="$PROJECT_DIR$/helper/utils.py" />
     </list>
     <ignored path="RFTutorials.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -516,6 +514,13 @@
       <option name="number" value="Default" />
       <updated>1458510123631</updated>
     </task>
+    <task id="LOCAL-00001" summary="model save and load">
+      <created>1458956276079</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1458956276079</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -554,10 +559,11 @@
     <frame x="65" y="50" width="1535" height="850" extended-state="0" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2495114" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2495114" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -583,6 +589,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="model save and load" />
+    <option name="LAST_COMMIT_MESSAGE" value="model save and load" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -726,7 +736,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="300" column="0" selection-start-line="300" selection-start-column="0" selection-end-line="300" selection-end-column="0" />
           <folding>
-            <element signature="e#2154#2192#0" expanded="true" />
+            <element signature="e#2154#2192#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -820,7 +830,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="300" column="0" selection-start-line="300" selection-start-column="0" selection-end-line="300" selection-end-column="0" />
           <folding>
-            <element signature="e#2154#2192#0" expanded="true" />
+            <element signature="e#2154#2192#0" expanded="false" />
           </folding>
         </state>
       </provider>
